@@ -35,8 +35,8 @@
 //! Source: new, ported from libuv 1.48.0 `src/inet.c` (`inet_pton4`,
 //! `inet_pton6`, `uv_inet_pton`, `inet_ntop4`, `inet_ntop6`) and
 //! `src/runtime/uv/net_addr.cpp` (the NUL check, the octet and segment
-//! order). lean2rr's leanrt `src/net.rs` (`pton`, `ntop`) calls glibc's
-//! `inet_pton`/`inet_ntop` through FFI instead.
+//! order). lean2rr's leanrt `src/net.rs` (`pton`, `ntop`) calls these
+//! ports (`pton_v4`, `pton_v6`, `ntop_v4`, `ntop_v6`).
 
 use core::fmt;
 
